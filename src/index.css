@@ -1,3 +1,5 @@
+@import-normalize;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +7,163 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #4a4a4a;
+  min-width: 320px;
+  overflow-y: scroll;
+  height: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+  margin: 0;
+}
+
+a, button {
+  cursor: pointer;
+  user-select: none;
+  text-decoration: none;
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+ul,
+nav {
+  padding: 0;
+  list-style: none;
+}
+
+img {
+  display: block;
+  pointer-events: none;
+  user-select: none;
+}
+
+#root {
+  height: 100%;
+}
+
+.section-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 50%;
+  grid-gap: 12px;
+  grid-template-rows: max-content;
+  padding: 50px;
+}
+
+.section-list-rows {
+  grid-column: 1 / -1;
+}
+
+.section-title {
+  grid-column: 1 / -1;
+  color: #595c5f;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.row-columnCaptions {
+  grid-column: 1 / -1;
+  color: #7e93a7;
+  font-size: 12px;
+  text-transform: uppercase;
+  box-shadow: 0 0 0;
+  background-color: #f2f6f9;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: baseline;
+  padding: 0 15px;
+}
+
+.row span {
+  padding: 20px 0 6px 0;
+}
+
+.rowItem {
+  grid-column: span 1;
+}
+
+.row .itemName {
+  color: #727578;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.row .itemPrice {
+  color: #f06953;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.center {
+  text-align: center;
+}
+
+.row .itemQuantity {
+  color: #4ea6bc;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.row .btn {
+  width: 174px;
+  height: 40px;
+  font-size: 12px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 3.33;
+  letter-spacing: 1px;
+  text-align: center;
+  color: #ffffff;
+  background: #4a4a4a;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  outline: none;
+}
+
+.row-totals {
+  border-top: 1px solid #e1e5e8;
+  margin-top: 40px;
+}
+
+.btn-columnCaption {
+  width: 174px;
 }
